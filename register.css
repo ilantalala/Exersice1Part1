@@ -1,0 +1,29 @@
+body{
+    background-image: linear-gradient(to right, rgb(144, 234, 244), rgb(165, 90, 195));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+.container{
+    height: 100%;
+    align-content: center;
+}
+.card{
+    background-color: rgba(32, 28, 28, 0.397) !important;
+}
+.col-md-9.pe-5 input[type="text"] {
+    background-color: #ffffff88;
+}
+.col-md-9.pe-5 input[type="password"] {
+    background-color: #ffffff88;
+}
+.col-md-9.pe-5 input[type="file"] {
+    background-color: #ffffff88;
+}
+.reg{
+    margin-left: 40px;
+}
+.sentence{
+    margin-top: 40px;
+}
