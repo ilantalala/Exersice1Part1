@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+body{
+    background-image: linear-gradient(to right, rgb(144, 234, 244), rgb(165, 90, 195));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.regWindow {
+    height: 300px;
+    width: 50%;
+    left: 25%;
+    position: fixed;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    background: rgba(88, 83, 83, 0.367);
+}
+form div{
+    font-size: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(194, 194, 194));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#inputUserName::placeholder {
+    font-weight: bold;
+    
+    color: rgba(206, 206, 206, 0.926);
+}
+#inputUserName{
+    flex:1 1 0%;
+    background-color: rgba(10, 10, 10, 0.277);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
