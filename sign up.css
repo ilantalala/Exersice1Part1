@@ -1,12 +1,11 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Fira sans', sans-serif;
 }
 body{
     background-image: linear-gradient(to right, rgb(144, 234, 244), rgb(165, 90, 195));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: 'Numans', sans-serif;
 }
 .regWindow {
     height: 300px;
@@ -20,27 +19,38 @@ body{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    
+
     background: rgba(88, 83, 83, 0.367);
 }
 form div{
-    font-size: 20px;
-    font-weight: bold;
+    font: 20px bold;
     background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(194, 194, 194));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: black;
 }
-#inputUserName::placeholder {
-    font-weight: bold;
-    
-    color: rgba(206, 206, 206, 0.926);
-}
-#inputUserName{
+.inputBlock{
     flex:1 1 0%;
     background-color: rgba(10, 10, 10, 0.277);
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
-    color: var(--light);
     font-size: 1.25rem;
+    position: relative;
+    left: 100px;
+}
+.inputBlock::placeholder{
+    font-weight: bold;
+    color: rgba(206, 206, 206, 0.926);
+}
+.mb-0{
+    position: relative;
+    top: 40px;
+}
+.backTo{
+    position: relative;
+    left: 35px;
+}
+#link-aqua{
+    color: aqua !important;
 }
