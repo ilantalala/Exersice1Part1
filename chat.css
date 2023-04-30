@@ -1,9 +1,10 @@
-body,html{
+body{
     height: 100%;
     margin: 0;
     background: #7F7FD5;
     background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    font-family: 'Numans', sans-serif;
 }
 .chat{
     margin-top: auto;
@@ -11,6 +12,10 @@ body,html{
 }
 .card{
     height: 500px;
+    max-height: 568.6px;
+    min-width: 300px;
+    position: relative;
+    top:50px;
     border-radius: 15px !important;
     background-color: rgba(0,0,0,0.4) !important;
 }
@@ -19,12 +24,22 @@ body,html{
     overflow-y: auto;
     white-space: nowrap;
 }
+.contacts li{
+}
+.contacts li:active{
+    background-color: rgba(0,0,0,0.4) !important;
+}
+.contacts li:focus{
+    background-color: rgba(0,0,0,0.4) !important;
+}
 .msg_card_body{
     overflow-y: auto;
+    height: 405px;
 }
 .card-header{
     border-radius: 15px 15px 0 0 !important;
     border-bottom: 0 !important;
+    padding-right: 0px;
 }
 .card-footer{
     border-radius: 0 0 15px 15px !important;
@@ -32,6 +47,9 @@ body,html{
 }
 .container{
     align-content: center;
+}
+#thin-search{
+    width: 250px;
 }
 .search{
     border-radius: 15px 0 0 15px !important;
@@ -53,6 +71,10 @@ body,html{
 .type_msg:focus{
     box-shadow:none !important;
     outline:0px !important;
+}
+.type_msg::placeholder{
+    position: relative;
+    top: 1px;
 }
 .attach_btn{
     border-radius: 15px 0 0 15px !important;
@@ -84,7 +106,7 @@ body,html{
     padding: 5px 10px;
     margin-bottom: 15px !important;
 }
-.active{
+.contacts li:focus{
     background-color: rgba(0,0,0,0.3);
 }
 .user_img{
@@ -123,6 +145,7 @@ body,html{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
+    font-family: 'Numans', sans-serif;
 }
 .user_info span{
     font-size: 20px;
@@ -218,4 +241,30 @@ body,html{
     .contacts_card{
         margin-bottom: 15px !important;
     }
+}
+.lower_btn{
+    height: 60px;
+}
+div{
+    font-family: 'Numans', sans-serif;
+}
+.bi-person-plus-fill{
+    position: relative;
+    left: 30px;
+    color: white;
+}
+#td1{
+    width: 80% !important;
+    position: relative;
+    left: 10px;
+}
+#Add-contact{
+    width: 90%;
+    position: relative;
+    left: 25px;
+}
+#exit_button{
+    position: relative;
+    top: 5px;
+    left: 5px;
 }
