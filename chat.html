@@ -4,26 +4,59 @@
 <head>
     <title>Chat</title>
     <link href="./chat.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-
 <body>
+<a href="sign%20up.html">
+    <button type="button" id="exit_button" class="btn btn-danger">Log out</button>
+</a>
 <!--list of all the chats-->
 <div class="container-fluid h-100">
     <div class="row justify-content-center h-100">
         <div class="col-md-4 col-xl-3 chat">
             <div class="card mb-sm-3 mb-md-0 contacts_card">
                 <!--the header of the side list-->
-                <div class="card-header">
-                    <!--search in the text-->
-                    <div class="input-group">
-                        <input type="text" placeholder="Search..." name="" class="form-control search">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
+                <table>
+                    <tr>
+                        <td id="td1">
+                            <span id="thin-search" class="card-header">
+                                <!--search in the text-->
+                                <span class="input-group">
+                                    <input type="text" placeholder="Search..." class="form-control search">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text search_btn"><i class="bi bi-search"></i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </td>
+                        <td id="td2">
+                            <span class="bi bi-person-plus-fill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            </span>
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Add a new contact</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Add"></button>
+                                        </div>
+                                        <input id="Add-contact" type="text" placeholder="Contact's identifier">
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                                                Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 <!--the list of the contacts-->
                 <div class="card-body contacts_body">
                     <ui class="contacts">
@@ -31,66 +64,79 @@
                         <li class="active">
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="./Ilan.png"
+                                    <img src="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
                                          class="rounded-circle user_img">
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
-                                    <span>Krisa neima</span>
-                                    <p>Krisa neima is online</p>
+                                    <span>John</span>
+                                    <p>Online</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="Ron.png"
+                                    <img src="https://pbs.twimg.com/profile_images/1525817315933421568/U0zRFTQd_400x400.jpg"
                                          class="rounded-circle user_img">
                                     <span class="online_icon offline"></span>
                                 </div>
 
                                 <div class="user_info">
-                                    <span>Ron</span>
-                                    <p>Taherah left 7 mins ago</p>
+                                    <span>Paul</span>
+                                    <p>Yesterday</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="Ron.png"
+                                    <img src="https://collectionimages.npg.org.uk/large/mw117061/George-Harrison.jpg"
                                          class="rounded-circle user_img">
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
-                                    <span>for example</span>
-                                    <p>Sami is online</p>
+                                    <span>George</span>
+                                    <p>02.03.2023</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="Ilan.png"
+                                    <img src="data:image/jpeg;base64,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"
                                          class="rounded-circle user_img">
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
-                                    <span>for example</span>
-                                    <p>Sami is online</p>
+                                    <span>Ringo</span>
+                                    <p>Online</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="Ron.png"
+                                    <img src="https://pyxis.nymag.com/v1/imgs/0cf/479/a2367dc7c5583200152db174339266ce0a-eric-clapton.rsquare.w330.jpg"
                                          class="rounded-circle user_img">
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
-                                    <span>for example</span>
-                                    <p>Sami is online</p>
+                                    <span>Eric</span>
+                                    <p>10.02.2023</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img src="https://i.guim.co.uk/img/media/bdcb6fedd21de7122fb541b95749b4543254035a/0_204_2572_1543/master/2572.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=11aeffd16b0d57ac0dda0cfb4cd22bf9"
+                                         class="rounded-circle user_img">
+                                    <span class="online_icon"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span>Jimi</span>
+                                    <p>02.01.2023</p>
                                 </div>
                             </div>
                         </li>
@@ -104,22 +150,26 @@
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
                         <div class="img_cont">
-                            <img src="./Ilan.png" class="rounded-circle user_img">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
+                                 class="rounded-circle user_img">
                             <span class="online_icon"></span>
                         </div>
                         <div class="user_info">
-                            <span>Krsa neima</span>
-                            <p>2 Messages</p>
+                            <span>John</span>
+                            <p>Online</p>
                         </div>
-                    </div>
-                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
-                    <div class="action_menu">
-                        <ul>
-                            <li><i class="fas fa-user-circle"></i> View profile</li>
-                            <li><i class="fas fa-users"></i> Add to close friends</li>
-                            <li><i class="fas fa-plus"></i> Add to group</li>
-                            <li><i class="fas fa-ban"></i> Block</li>
-                        </ul>
+                        <span id="action_menu_btn">
+                            <span class="dropdown mt-3">
+                                <span class="dropdown-toggle-no-caret bi bi-three-dots"
+                                      id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true"
+                                      aria-expanded="false"></span>
+                                <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+                                    <li><a href="#" class="dropdown-item"> Add to group</a> </li>
+                                    <li><a href="#" class="dropdown-item"> Bey</a> </li>
+
+                                </ul>
+                            </span>
+                        </span>
                     </div>
                 </div>
                 <!--chat messages-->
@@ -135,12 +185,14 @@
                         </div>
                         <!--profile pic of massage-->
                         <div class="img_cont_msg">
-                            <img src="./Ron.png" class="rounded-circle user_img_msg">
+                            <img src="https://static.tvtropes.org/pmwiki/pub/images/slash_7.jpg"
+                                 class="rounded-circle user_img_msg">
                         </div>
                     </div>
                     <div class="d-flex justify-content-start mb-4">
                         <div class="img_cont_msg">
-                            <img src="./Ilan.png" class="rounded-circle user_img_msg">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
+                                 class="rounded-circle user_img_msg">
                         </div>
                         <div class="msg_cotainer">
                             mmmm....
@@ -152,14 +204,14 @@
                 <div class="card-footer">
                     <div class="input-group">
                         <div class="input-group-append">
-                            <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                            <span class="lower_btn input-group-text attach_btn"><i class="bi bi-paperclip"></i></span>
                         </div>
                         <!--the input text-->
-                        <textarea name="" class="form-control type_msg"
-                                  placeholder="Type your message..."></textarea>
+                        <input name="" class="form-control type_msg"
+                                  placeholder="Type your message..."></input>
                         <div class="input-group-append">
                             <!--the arrow button for send message-->
-                            <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+                            <span class="lower_btn input-group-text send_btn"><i class="bi bi-caret-right-fill"></i></span>
                         </div>
                     </div>
                 </div>
@@ -167,5 +219,6 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
